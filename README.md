@@ -28,8 +28,8 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Documentação
 
 <ol>
-<li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
+<li><a href="docs/01-Documentação de Contexto.pdf"> Documentação de Contexto</a></li>
+<li><a href="docs/02-Especificação do Projeto.pdf"> Especificação do Projeto</a></li>
 <li><a href="docs/03-Metodologia.md"> Metodologia</a></li>
 <li><a href="docs/04-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a></li>
