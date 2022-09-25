@@ -6,7 +6,7 @@
 
 `3º SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo geral deste trabalho é a criação de uma aplicação movel que ofereça quadras para prática de esportes..
 
 ## Integrantes
 
