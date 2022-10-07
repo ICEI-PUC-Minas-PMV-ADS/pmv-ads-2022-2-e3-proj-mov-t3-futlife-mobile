@@ -13,6 +13,7 @@ O objetivo geral deste trabalho é a criação de uma aplicação movel que ofer
 * Camila Jardim Francisco
 * Diego Lúcio de Paula Rocha
 * Hugo Vinicius Damasceno Pinto
+* Jaqueline Câmara Poletto
 * Rafael Mautone Costa
 * Tarcísio Junior Amaral de Almeida
 
