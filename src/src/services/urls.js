@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://blue-rings-clean-177-182-179-253.loca.lt';
