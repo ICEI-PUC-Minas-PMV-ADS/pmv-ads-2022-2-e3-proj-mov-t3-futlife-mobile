@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "email": "hugo@hugo.com",
+      "password": "$2a$10$N08AdfWZdFUzJwVAqrwsSenY7kwg697yaDeVFzPx8o7N8/.eWmXV6",
+      "name": "Hugo Pinto",
+      "id": 1
+    },
+  ],
+  "gastos": [
+     
+  ]
+}

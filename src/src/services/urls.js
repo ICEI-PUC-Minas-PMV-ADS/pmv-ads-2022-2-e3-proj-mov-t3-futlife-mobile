@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://sad-ears-lose-24-48-3-135.loca.lt/';
