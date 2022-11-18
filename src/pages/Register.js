@@ -49,7 +49,7 @@ const Register = () => {
         <Logo />
       </View>
 
-      <Headline style={styles.textHeader}>Fuel Manager</Headline>
+      <Headline style={styles.textHeader}>Registro de usuário</Headline>
 
       <Body>
       <Input
