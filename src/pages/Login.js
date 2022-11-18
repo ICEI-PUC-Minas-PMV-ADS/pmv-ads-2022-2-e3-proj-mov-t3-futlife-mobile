@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { StyleSheet, View, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -5,6 +6,7 @@ import { TextInput, Button, Headline, Text } from 'react-native-paper';
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
+import InputChar from '../components/InputChar';
 import Logo from '../components/Logo';
 
 import { useNavigation } from '@react-navigation/native';
@@ -45,13 +47,13 @@ const Login = () => {
       <Headline style={styles.textHeader}>Reserve sua quadra</Headline>
 
       <Body>
-        <Input
+        <InputChar
           label="Email"
           value={email}
           onChangeText={(text) => setEmail(text)}
           left={<TextInput.Icon name="account" />}
         />
-        <Input
+        <InputChar
           label="Senha"
           value={password}
           secureTextEntry

@@ -7,7 +7,56 @@
       "id": 1
     },
   ],
-  "gastos": [
-     
+  "quadras": [
+    {
+      "id": 1,
+      "descricao": "Quadra poliesportiva Amarela"
+    },
+    {
+      "id": 2,
+      "descricao": "Quadra poliesportiva Azul"
+    }
+  ],
+  "agenda": [
+    {
+      "data": "01/11/2022",
+      "hora": "20:00",
+      "idQuadra": 2,
+      "numJogadores": "5",
+      "equipe": "Engenharia de SW",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "idQuadra": 1,
+      "data": "03/11/2022",
+      "hora": "18:00",
+      "numJogadores": "6",
+      "equipe": "ADS"
+    },
+    {
+      "data": "25/10/2022",
+      "hora": "22",
+      "idQuadra": "2",
+      "id": 3,
+      "numJogadores": "3",
+      "equipe": "Sistemas"
+    },
+    {
+      "data": "07/11/2022",
+      "hora": "18:00",
+      "idQuadra": "2",
+      "id": 4,
+      "numJogadores": "3",
+      "equipe": "Professores"
+    },
+    {
+      "data": "26/10/2022",
+      "hora": "14:00",
+      "idQuadra": "2",
+      "id": 5,
+      "numJogadores": "3",
+      "equipe": "Funcionários"
+    }
   ]
 }

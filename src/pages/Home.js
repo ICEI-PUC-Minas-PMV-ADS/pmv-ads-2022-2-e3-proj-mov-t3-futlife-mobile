@@ -1,18 +1,17 @@
 import React, {useState} from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 
-import Gastos from './Gastos';
+import ViewAgenda from './ViewAgenda';
 
 const Home = () => {
   const [index, setIndex] = useState(0);
   
   const [routes] = useState([
-    { key: 'gastos', title: 'Agendamento', icon: 'calendar-account' },    
+    { key: 'agenda', title: 'Agendamento', icon: 'calendar-account' }    
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    gastos: Gastos,
-    calculadora: Calculadora,
+    agenda: ViewAgenda       
   });
 
   return (
