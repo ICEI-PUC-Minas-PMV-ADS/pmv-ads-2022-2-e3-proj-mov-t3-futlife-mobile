@@ -1,4 +1,4 @@
-import axios, {AxiosInstance} from 'axios';
+import axios, {AxiosInstance} from "axios";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const onRequest = async(config) => {
@@ -9,11 +9,13 @@ const onRequest = async(config) => {
   return config;
 }
 
-const setupInterceptorsTo = (axiosInstance : AxiosInstance) => {
+const setupInterceptorsTo = (axiosInstance) => {
   axiosInstance.interceptors.request.use(onRequest);
   return axiosInstance;
 }
 
 const API = axios.create();
+
 setupInterceptorsTo(API);
+
 export default API;

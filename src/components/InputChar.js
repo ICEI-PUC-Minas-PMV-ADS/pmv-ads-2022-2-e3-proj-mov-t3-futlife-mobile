@@ -2,24 +2,23 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
 
-const Header = (props) => {
+const InputChar = (props) => {
   return (
       <TextInput 
-        style={styles.input}
-        keyboardType='decimal-pad'
+        style={styles.input}         
         {...props}      
       />)
     ;
 };
 
 const styles = StyleSheet.create({
-    input: {        
+  input: {
     backgroundColor: '#FFF',      
     width: '80%',          
     marginBottom: 10,    
     fontSize: 15,
-    borderRadius :5,          
+    borderRadius :5, 
   },
 });
 
-export default Header;
+export default InputChar;
