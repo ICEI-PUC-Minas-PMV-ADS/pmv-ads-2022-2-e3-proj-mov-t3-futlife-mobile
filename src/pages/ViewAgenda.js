@@ -32,7 +32,8 @@ const ViewAgenda = () => {
       title={'Equipe: ' + item.equipe}
       description={        
         'Qt. Jogadores:  ' + item.numJogadores + ''
-      }      
+      }  
+
       left={(props) => (
         <List.Icon
           {...props}
@@ -43,7 +44,8 @@ const ViewAgenda = () => {
       right={(props) => (
         <Text {...props} style={{ alignSelf: 'center' }}>
           {' '}
-          {item.data}{' '}
+          {item.data}
+          {' '}
         </Text>
       )}
       onPress={() => navigation.navigate('EditAgenda', {item})}

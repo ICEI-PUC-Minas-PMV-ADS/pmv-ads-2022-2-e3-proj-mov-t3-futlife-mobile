@@ -6,8 +6,8 @@ const Body = ({children}) =>{
 };
 
 const styles = StyleSheet.create({
- container:{   
-    alignItems: 'center',    
+  container:{       
+    flex:1,    
     backgroundColor: '#FFF',
     margin:8,
   },
