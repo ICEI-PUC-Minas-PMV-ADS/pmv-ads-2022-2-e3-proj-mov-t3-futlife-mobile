@@ -18,6 +18,7 @@ import Input from '../components/Input';
 import InputChar from '../components/InputChar';
 import { useNavigation } from '@react-navigation/native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import {useUser} from '../contexts/UserContext';
 
 import {updateAgenda, insertAgenda, deleteAgenda} from '../services/agenda.services';
 
@@ -33,6 +34,8 @@ const EditAgenda = ({ route }) => {
   const [hora, setHora] = useState(null);      
   const [numJogadores, setNumJogadores] = useState(null);
   const [equipe, setEquipe] = useState(null);
+  const {name} = useUser();
+  const [nomeCompleto, setNomeCompleto] = useState(name);
 
   const [openQuadra, setOpenQuadra] = useState(false);
   const [valueQuadra, setValueQuadra] = useState(null);
@@ -64,6 +67,7 @@ const EditAgenda = ({ route }) => {
       setIdQuadra(item.idQuadra);
       setNumJogadores(item.numJogadores);
       setEquipe(item.equipe);
+      setNomeCompleto(item.nomeCompleto);
       setValueQuadra(item.idQuadra);
       setValueHorario(item.hora);
     }
@@ -77,6 +81,7 @@ const EditAgenda = ({ route }) => {
         idQuadra: idQuadra,
         numJogadores: numJogadores,
         equipe: equipe,
+        nomeCompleto: nomeCompleto,
         id: item.id
       }).then(res => {
         navigation.goBack();
@@ -87,7 +92,8 @@ const EditAgenda = ({ route }) => {
         hora: hora,
         idQuadra: idQuadra,
         numJogadores: numJogadores,
-        equipe: equipe
+        equipe: equipe,
+        nomeCompleto: nomeCompleto
       }).then(res => {
         navigation.goBack();
       });
@@ -107,7 +113,7 @@ const EditAgenda = ({ route }) => {
   }
 
   return (
-    <Container>
+    <Container>      
       <Header title={'Agendamento'} goBack={() => navigation.goBack()}>
         <Appbar.Action icon="check" onPress={handleSalvar} />
         {
@@ -119,8 +125,15 @@ const EditAgenda = ({ route }) => {
 
       <Body>
         <View style={styles.containerRadio}>
-          <Text> Faça sua reserva </Text>
-        </View>      
+          <Text> Agendar Horário </Text>
+        </View> 
+
+        <InputChar
+          label="Nome Completo"
+          value={nomeCompleto}
+          onChangeText={(text) => setNomeCompleto(text)}
+          left={<TextInput.Icon name="account-circle-outline" />}
+        />    
         
         {show && (
           <DateTimePicker
