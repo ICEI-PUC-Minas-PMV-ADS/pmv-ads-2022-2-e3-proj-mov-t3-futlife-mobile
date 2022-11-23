@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://sad-ears-lose-24-48-3-135.loca.lt/';
+export const BASE_URL = 'https://f1a5-2804-14c-5bc6-9f9d-4f1-89f3-8e1b-fb67.sa.ngrok.io';
