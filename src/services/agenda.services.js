@@ -68,3 +68,22 @@ export const deleteAgenda = async (id) => {
     return null;
   }
 }
+
+export const findHorario = async (param) => {
+  try{        
+    let url = `${BASE_URL}/660/agenda?data=${param.data}&hora=${param.hora}&idQuadra=${param.idQuadra}`;
+    console.log('url: '+url);
+    return await API.get(url).then( 
+      response => {        
+        return response.data;
+      },
+      error =>{
+        console.log(error);
+        return  null;
+      }
+    );
+  }catch(error){
+    console.log(error);
+    return null;
+  }  
+}

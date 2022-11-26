@@ -1,62 +1,118 @@
 {
   "users": [
     {
-      "email": "hugo@hugo.com",
-      "password": "$2a$10$N08AdfWZdFUzJwVAqrwsSenY7kwg697yaDeVFzPx8o7N8/.eWmXV6",
-      "name": "Hugo Pinto",
+      "email": "paola@gmail.com",
+      "password": "$2a$10$oL.oRLxAvWI/aBvjBi9vF.X8yn80OimRmxdPoreSRUx0u8CGxsYfW",
+      "name": "Paola Lima",
       "id": 1
-    },
+    }
   ],
   "quadras": [
     {
-      "id": 1,
-      "descricao": "Quadra poliesportiva Amarela"
+      "label": "Voleibol",
+      "value": "voleibol"
     },
     {
-      "id": 2,
-      "descricao": "Quadra poliesportiva Azul"
+      "label": "Society",
+      "value": "society"
+    },
+    {
+      "label": "Basquete",
+      "value": "basquete"
+    },
+    {
+      "label": "Tênis",
+      "value": "tenis"
+    },
+    {
+      "label": "Peteca",
+      "value": "peteca"
+    }
+  ],
+  "horario": [
+    {
+      "label": "06:00-07:50",
+      "value": "06:00-07:50"
+    },
+    {
+      "label": "08:00-09:50",
+      "value": "08:00-09:50"
+    },
+    {
+      "label": "10:00-11:50",
+      "value": "10:00-11:50"
+    },
+    {
+      "label": "12:00-13:50",
+      "value": "12:00-13:50"
+    },
+    {
+      "label": "14:00-15:50",
+      "value": "14:00-15:50"
+    },
+    {
+      "label": "16:00-17:50",
+      "value": "16:00-17:50"
+    },
+    {
+      "label": "18:00-19:50",
+      "value": "18:00-19:50"
+    },
+    {
+      "label": "20:00-21:50",
+      "value": "20:00-21:50"
     }
   ],
   "agenda": [
     {
       "data": "01/11/2022",
-      "hora": "20:00",
-      "idQuadra": 2,
-      "numJogadores": "5",
-      "equipe": "Engenharia de SW",
+      "hora": "12:00-13:50",
+      "idQuadra": "basquete",
+      "numJogadores": "10",
+      "equipe": "ADS",
       "id": 1
     },
     {
-      "id": 2,
-      "idQuadra": 1,
       "data": "03/11/2022",
-      "hora": "18:00",
-      "numJogadores": "6",
-      "equipe": "ADS"
+      "hora": "18:00-19:50",
+      "idQuadra": "basquete",
+      "numJogadores": "3",
+      "equipe": "Sistemas",
+      "id": 2
     },
     {
       "data": "25/10/2022",
-      "hora": "22",
-      "idQuadra": "2",
-      "id": 3,
+      "hora": "16:00-17:50",
+      "idQuadra": "basquete",
       "numJogadores": "3",
-      "equipe": "Sistemas"
+      "equipe": "Engenharia ",
+      "id": 3
     },
     {
       "data": "07/11/2022",
-      "hora": "18:00",
-      "idQuadra": "2",
+      "hora": "20:00-21:50",
+      "idQuadra": "peteca",
       "id": 4,
-      "numJogadores": "3",
-      "equipe": "Professores"
+      "numJogadores": "4",
+      "equipe": "Medicina"
     },
     {
-      "data": "26/10/2022",
-      "hora": "14:00",
-      "idQuadra": "2",
-      "id": 5,
-      "numJogadores": "3",
-      "equipe": "Funcionários"
+      "data": "30/11/2022",
+      "hora": "18:00-19:50",
+      "idQuadra": "voleibol",
+      "numJogadores": null,
+      "equipe": "Sistemas",
+      "nomeCompleto": "Paola Lima",
+      "id": 5
+    },
+    {
+      "data": "30/11/2022",
+      "hora": "06:00-07:50",
+      "idQuadra": "voleibol",
+      "numJogadores": null,
+      "equipe": "Veteranos",
+      "nomeCompleto": "Paola Lima",
+      "id": 6
     }
   ]
 }

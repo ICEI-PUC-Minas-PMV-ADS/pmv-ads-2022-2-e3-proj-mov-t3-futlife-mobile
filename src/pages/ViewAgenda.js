@@ -29,9 +29,9 @@ const ViewAgenda = () => {
 
   const renderItem = ({ item }) => (
     <List.Item
-      title={'Equipe: ' + item.equipe}
+      title={'Equipe: ' + item.equipe + ' - ' + item.idQuadra}
       description={        
-        'Qt. Jogadores:  ' + item.numJogadores + ''
+        'Horário:  ' + item.hora + ''
       }  
 
       left={(props) => (

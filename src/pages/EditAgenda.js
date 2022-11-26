@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import {
   RadioButton,
   Text,
@@ -20,7 +20,9 @@ import { useNavigation } from '@react-navigation/native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {useUser} from '../contexts/UserContext';
 
-import {updateAgenda, insertAgenda, deleteAgenda} from '../services/agenda.services';
+import {getAgenda, updateAgenda, insertAgenda, deleteAgenda, findHorario} from '../services/agenda.services';
+import {getQuadras} from '../services/quadra.services';
+import {getHorarios} from '../services/horario.services';
 
 const EditAgenda = ({ route }) => {
   const navigation = useNavigation();
@@ -37,28 +39,17 @@ const EditAgenda = ({ route }) => {
   const {name} = useUser();
   const [nomeCompleto, setNomeCompleto] = useState(name);
 
-  const [openQuadra, setOpenQuadra] = useState(false);
-  const [valueQuadra, setValueQuadra] = useState(null);
-  const [itemsQuadra, setItemsQuadra] = useState([
-    { label: 'Voleibol', value: 'voleibol' },
-    { label: 'Society', value: 'society' },
-    { label: 'Basquete', value: 'basquete' },
-    { label: 'Tênis', value: 'tenis' },
-    { label: 'Peteca', value: 'peteca' }
-  ]);
-
   const [openHorario, setOpenHorario] = useState(false);
   const [valueHorario, setValueHorario] = useState(null);
-  const [itemsHorario, setItemsHorario] = useState([
-    { label: '06:00-07:50', value: '06:00-07:50' },
-    { label: '08:00-09:50', value: '08:00-09:50' },
-    { label: '10:00-11:50', value: '10:00-11:50' },
-    { label: '12:00-13:50', value: '12:00-13:50' },
-    { label: '14:00-15:50', value: '14:00-15:50' },
-    { label: '16:00-17:50', value: '16:00-17:50' },
-    { label: '18:00-19:50', value: '18:00-19:50' },
-    { label: '20:00-21:50', value: '20:00-21:50' }
-  ]);
+  const [itemsHorario, setItemsHorario] = useState([]);
+
+  const [openQuadra, setOpenQuadra] = useState(false);
+  const [valueQuadra, setValueQuadra] = useState(null);
+  const [itemsQuadra, setItemsQuadra] = useState([]);  
+
+  //fetch('https://5ee6-2804-14c-5bc6-9f9d-599f-961-ca9-728.sa.ngrok.io/quadras')
+  //.then(T => T.json())
+  //.then(console.log)
 
   useEffect(() => {
     if (item) {
@@ -71,10 +62,18 @@ const EditAgenda = ({ route }) => {
       setValueQuadra(item.idQuadra);
       setValueHorario(item.hora);
     }
+    getQuadras().then(setItemsQuadra);    
+    getHorarios().then(setItemsHorario);    
   }, [item]);
 
-  const handleSalvar = () => {
+  const handleSalvar = async () => {
     if (item) {
+      await findHorario({
+        data,
+        hora,
+        idQuadra
+      }).then(dados => {
+        if (dados.length == 0) {
       updateAgenda({
         data: data,
         hora: hora,
@@ -86,7 +85,24 @@ const EditAgenda = ({ route }) => {
       }).then(res => {
         navigation.goBack();
       });
+        }
+        else {
+          Alert.alert(
+            "",
+            "Horário indisponível",
+            [
+              { text: "OK", onPress: () => console.log("OK Pressed") }
+            ]
+          );
+        }
+      });
     } else {
+      await findHorario({
+        data,
+        hora,
+        idQuadra
+      }).then(dados => {
+        if (dados.length == 0) {
       insertAgenda({
         data: data,
         hora: hora,
@@ -97,7 +113,17 @@ const EditAgenda = ({ route }) => {
       }).then(res => {
         navigation.goBack();
       });
-
+        }
+        else {
+          Alert.alert(
+            "",
+            "Horário indisponível",
+            [
+              { text: "OK", onPress: () => console.log("OK Pressed") }
+            ]
+          );
+        }
+      });
     }
   };
 
