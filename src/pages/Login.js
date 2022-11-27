@@ -47,13 +47,13 @@ const Login = () => {
       <Headline style={styles.textHeader}>Reserve sua quadra</Headline>
 
       <Body>
-        <InputChar
+        <InputChar style={styles.charRegister}
           label="Email"
           value={email}
           onChangeText={(text) => setEmail(text)}
           left={<TextInput.Icon name="account" />}
         />
-        <InputChar
+        <InputChar style={styles.charRegister}
           label="Senha"
           value={password}
           secureTextEntry
@@ -78,18 +78,25 @@ const Login = () => {
 };
 
 const styles = StyleSheet.create({
+
+  charRegister: {   
+    backgroundColor: '#FFF', 
+    marginBottom: 8,
+    marginTop: 8, 
+    padding: 2,    
+  },
+
   buttonLogin: {
     backgroundColor: '#228B22',
-    marginBottom: 8,
-    width: '80%',
+    marginBottom: 15,
+    width: '100%',
   },
 
   buttonRegister: {
     color: '#000000',
     backgroundColor: '#FFFF00',
-    marginBottom: 8,
-    width: '80%',
-    textDecorationColor: '#000000',
+    width: '100%',    
+    //textDecorationColor: '#000000',
   },
   textHeader: {
     color: '#FFF',

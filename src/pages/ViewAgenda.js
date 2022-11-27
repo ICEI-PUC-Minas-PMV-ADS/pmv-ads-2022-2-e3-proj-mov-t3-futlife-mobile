@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
-import { List, Text, FAB } from 'react-native-paper';
+import { List, Text, FAB, Button } from 'react-native-paper';
 
 import Header from '../components/Header';
 import Container from '../components/Container';
@@ -28,7 +28,7 @@ const ViewAgenda = () => {
   }, [isFocused]);
 
   const renderItem = ({ item }) => (
-    <List.Item
+    <List.Item style={styles.listaAgenda}
       title={'Equipe: ' + item.equipe + ' - ' + item.idQuadra}
       description={        
         'Horário:  ' + item.hora + ''
@@ -61,7 +61,7 @@ const ViewAgenda = () => {
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
         />
-        <FAB
+        <Button
           style={styles.fab}
           small          
           icon="plus"
@@ -76,14 +76,21 @@ const ViewAgenda = () => {
 };
 
 const styles = StyleSheet.create({
+
+  listaAgenda: {
+    backgroundColor: '#10101010',         
+  },
+
   telaAgenda: {
     backgroundColor: '#FFF',      
   },
   fab: {
+    marginLeft: 40, 
     margin: 16,
     right: 0,
     bottom: 0,    
     backgroundColor: '#228B22',
+    width: '80%',    
   },
 });
 

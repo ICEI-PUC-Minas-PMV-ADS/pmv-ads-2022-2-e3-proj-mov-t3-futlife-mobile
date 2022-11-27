@@ -256,6 +256,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginBottom: 8,
+    backgroundColor: '#228B22',
   },
   dropdown: {
     backgroundColor: '#FFF',
