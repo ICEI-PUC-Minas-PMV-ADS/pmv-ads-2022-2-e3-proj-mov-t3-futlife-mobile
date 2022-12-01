@@ -272,13 +272,13 @@ const styles = StyleSheet.create({
   dropdownQuadra: {
     marginHorizontal: 10,
     width: "50%",
-    marginBottom: 15,
+    marginBottom: 100,
     borderRadius :5, 
   },
   dropdownHorario: {
     marginHorizontal: 10,
     width: "50%",
-    marginBottom: 15,
+    marginBottom: 100,
     borderRadius :5, 
   },  
   dropdown: {
