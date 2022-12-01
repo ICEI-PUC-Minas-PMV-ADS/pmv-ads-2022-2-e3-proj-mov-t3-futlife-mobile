@@ -1,0 +1,43 @@
+{
+  "name": "newfutlife",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "@expo/webpack-config": "^0.17.2",
+    "@react-native-async-storage/async-storage": "^1.17.11",
+    "@react-native-community/datetimepicker": "6.5.2",
+    "@react-navigation/bottom-tabs": "^6.4.1",
+    "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.2",
+    "@react-navigation/stack": "^6.3.5",
+    "axios": "^1.1.3",
+    "expo-camera": "~13.1.0",
+    "expo-status-bar": "~1.4.2",
+    "moment": "^2.29.4",
+    "react": "18.1.0",
+    "react-devtools": "^4.26.1",
+    "react-dom": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-anchor-carousel": "^4.0.1",
+    "react-native-dropdown-picker": "^5.4.3",
+    "react-native-paper": "^5.0.0-rc.10",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "^3.18.2",
+    "react-native-vector-icons": "^9.2.0",
+    "react-native-web": "~0.18.9",
+    "react-navigation": "^4.4.4",
+    "styled-components": "^5.3.6",
+    "react-native-reanimated": "~2.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}
