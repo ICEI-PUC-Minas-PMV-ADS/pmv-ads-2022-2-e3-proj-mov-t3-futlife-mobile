@@ -2,8 +2,10 @@ import React from 'react';
 
 import {useUser} from '../contexts/UserContext';
 
-import Main from './Main';
+import NavigationUserSigned from './NavigationUserSigned';
 import Auth from './Auth';
+import NavigationUserUnsigned from './NavigationUserUnsigned';
+
 
 const Route = () => {
 
@@ -13,8 +15,8 @@ const Route = () => {
     <>
     {
       signed 
-      ? <Main />
-      : <Auth />
+      ? <NavigationUserSigned />
+      : <NavigationUserUnsigned />
     }
     </>
   )

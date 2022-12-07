@@ -13,11 +13,11 @@ import {register} from '../services/auth.services';
 const Register = () => {
 
   const navigation = useNavigation();
-  
+ 
   const [name, setName] = useState('Hugo Pinto');
   const [email, setEmail] = useState('hugo@hugo.com');
   const [password, setPassword] = useState('123456');
-
+  
   const handleRegister = () => {
 
     register({
@@ -82,7 +82,7 @@ const Register = () => {
           mode="contained"
           onPress={() => navigation.goBack()}>
           Cancelar
-        </Button>
+        </Button>     
       </Body>
     </Container>
   );

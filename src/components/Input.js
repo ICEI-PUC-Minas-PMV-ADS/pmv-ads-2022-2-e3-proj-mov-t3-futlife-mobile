@@ -5,20 +5,20 @@ import { TextInput } from 'react-native-paper';
 const Header = (props) => {
   return (
       <TextInput 
-        style={styles.input}
-        keyboardType='decimal-pad'
+        style={styles.input} 
+        //keyboardType='decimal-pad'
         {...props}      
       />)
     ;
 };
 
 const styles = StyleSheet.create({
-    input: {        
+  input: {    
     backgroundColor: '#FFF',      
     width: '80%',          
     marginBottom: 10,    
     fontSize: 15,
-    borderRadius :5,          
+    borderRadius :5, 
   },
 });
 

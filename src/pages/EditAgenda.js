@@ -74,17 +74,17 @@ const EditAgenda = ({ route }) => {
         idQuadra
       }).then(dados => {
         if (dados.length == 0) {
-      updateAgenda({
-        data: data,
-        hora: hora,
-        idQuadra: idQuadra,
-        numJogadores: numJogadores,
-        equipe: equipe,
-        nomeCompleto: nomeCompleto,
-        id: item.id
-      }).then(res => {
-        navigation.goBack();
-      });
+          updateAgenda({
+            data: data,
+            hora: hora,
+            idQuadra: idQuadra,
+            numJogadores: numJogadores,
+            equipe: equipe,
+            nomeCompleto: nomeCompleto,
+            id: item.id
+          }).then(res => {
+            navigation.goBack();
+          });
         }
         else {
           Alert.alert(
@@ -103,16 +103,16 @@ const EditAgenda = ({ route }) => {
         idQuadra
       }).then(dados => {
         if (dados.length == 0) {
-      insertAgenda({
-        data: data,
-        hora: hora,
-        idQuadra: idQuadra,
-        numJogadores: numJogadores,
-        equipe: equipe,
-        nomeCompleto: nomeCompleto
-      }).then(res => {
-        navigation.goBack();
-      });
+          insertAgenda({
+            data: data,
+            hora: hora,
+            idQuadra: idQuadra,
+            numJogadores: numJogadores,
+            equipe: equipe,
+            nomeCompleto: nomeCompleto
+          }).then(res => {
+            navigation.goBack();
+          });
         }
         else {
           Alert.alert(
@@ -272,13 +272,13 @@ const styles = StyleSheet.create({
   dropdownQuadra: {
     marginHorizontal: 10,
     width: "50%",
-    marginBottom: 100,
+    marginBottom: 15,
     borderRadius :5, 
   },
-  dropdownHorario: {
+  dropdownHorario: {    
     marginHorizontal: 10,
     width: "50%",
-    marginBottom: 100,
+    marginBottom: 15,
     borderRadius :5, 
   },  
   dropdown: {

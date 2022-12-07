@@ -18,8 +18,8 @@ const Login = () => {
   const navigation = useNavigation();
   const { setSigned, setName } = useUser();
 
-  const [email, setEmail] = useState('Hugo@hugo.com');
-  const [password, setPassword] = useState('123456');
+  const [email, setEmail] = useState('paola@gmail.com');
+  const [password, setPassword] = useState('pucminas');
 
   const handleLogin = () => {
     login({
@@ -44,7 +44,7 @@ const Login = () => {
         <Logo />
       </View>
 
-      <Headline style={styles.textHeader}>Reserve sua quadra</Headline>
+      <Headline style={styles.textHeader}></Headline>
 
       <Body>
         <InputChar style={styles.charRegister}

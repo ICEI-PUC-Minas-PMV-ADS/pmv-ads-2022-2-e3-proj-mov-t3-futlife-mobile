@@ -30,8 +30,8 @@ const ViewAgenda = () => {
   const renderItem = ({ item }) => (
     <List.Item style={styles.listaAgenda}
       title={'Equipe: ' + item.equipe + ' - ' + item.idQuadra}
-      description={        
-        'Horário:  ' + item.hora + ''
+      description={                
+        'Horário:       ' + item.hora + ''
       }  
 
       left={(props) => (
